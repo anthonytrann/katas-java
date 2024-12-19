@@ -1,12 +1,15 @@
 public class SumDigits {
-    public static int SumDigits(int number) {
+    public float getSumDigits(float number) {
         String numberStr = "" + number;
+        float total = 0;
         for(int i=0; i<numberStr.length(); i++){
-            System.out.println(numberStr.charAt(i));
+            char ch = numberStr.charAt(i);
+            if(ch != '.'){
+                float charNum = Float.parseFloat("" + ch);
+                total = total + charNum;
+                System.out.println(total);
+            }
         }
-        return -1;
+        return total;
     }
-    // public static void main(String[] args) {
-    //     System.out.println("Hello World");
-    //   }
 }
