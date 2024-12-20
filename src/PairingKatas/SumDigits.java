@@ -1,5 +1,7 @@
 public class SumDigits {
-    public float getSumDigits(float number) {
+    public SumDigits(){ 
+    }
+    public static float getSumDigits(float number) {
         String numberStr = "" + number;
         float total = 0;
         for(int i=0; i<numberStr.length(); i++){
