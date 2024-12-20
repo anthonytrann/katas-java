@@ -17,6 +17,7 @@ public class GetCentury {
         int centS = -1;
         String centStr = "" + cent;
         int LastIndexOfCentStr = centStr.length() -1;
+        
         if(year == 0){ 
             cent = 1;
             centS = 1;
