@@ -14,16 +14,22 @@ public class GetCentury {
         centurySuffix.put(-1, "th");
 
         int cent = (int) Math.ceil((double)year / 100);
-        int centS = cent;
+        int centS = -1;
+        String centStr = "" + cent;
+        int LastIndexOfCentStr = centStr.length() -1;
         if(year == 0){ 
             cent = 1;
             centS = 1;
+        } else if (centStr.charAt(LastIndexOfCentStr) == '1' && cent != 11) {
+            centS = 1;
+        } else if (centStr.charAt(LastIndexOfCentStr) == '2' && cent != 12) {
+            centS = 2;
+        }
+        else if (centStr.charAt(LastIndexOfCentStr) == '3' && cent != 13) {
+            centS = 3;
         } 
 
-        // if cent 
-
         suffix = cent + centurySuffix.get(centS);
-
 
         return suffix;
     }

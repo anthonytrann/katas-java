@@ -20,10 +20,10 @@ public class TestGetCentury {
         expectedOutput = "1st";
         assertEquals(expectedOutput, result);
 
-        // testYear = 2001;
-        // result = GetCentury.getCentury(testYear);
-        // expectedOutput = "21st";
-        // assertEquals(expectedOutput, result);
+        testYear = 2001;
+        result = GetCentury.getCentury(testYear);
+        expectedOutput = "21st";
+        assertEquals(expectedOutput, result);
     }
 
     @Test
@@ -67,6 +67,11 @@ public class TestGetCentury {
         testYear = 901;
         result = GetCentury.getCentury(testYear);
         expectedOutput = "10th";
+        assertEquals(expectedOutput, result);
+
+        testYear = 1201;
+        result = GetCentury.getCentury(testYear);
+        expectedOutput = "13th";
         assertEquals(expectedOutput, result);
     }
 }
