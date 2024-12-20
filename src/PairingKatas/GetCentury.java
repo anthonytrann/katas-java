@@ -6,7 +6,7 @@ public class GetCentury {
     public static String getCentury(int year) {
         HashMap<Integer, String> centurySuffix = new HashMap<>();
 
-        String suffix = "";
+        String suffix;
 
         centurySuffix.put(1, "st");
         centurySuffix.put(2, "nd");
