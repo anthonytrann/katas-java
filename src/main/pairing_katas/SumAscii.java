@@ -2,6 +2,9 @@ import java.util.ArrayList;
 
 public class SumAscii {
     public static int sumAscii(ArrayList<String> names) {
+        if(names.size() == 0) {
+            return 0;
+        }
         int highestScore = Integer.MIN_VALUE;
         for(int i = 0; i < names.size(); i++) {
             String name = names.get(i).toLowerCase();
